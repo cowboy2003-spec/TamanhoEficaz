@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/DEV/TamanhoEficaz/src/app/setores/page.tsx"],"sourcesContent":["import {PageHero} from \"@/components/Layout\";export default function P(){return <><PageHero kicker=\"Indústria\" title=\"Setores\" text=\"Competências aplicadas a diferentes contextos industriais.\"/><section className=\"section\"><div className=\"wrap cards\">{[\"Metalomecânica\",\"Estruturas Metálicas\",\"Cimenteiras\",\"Papeleiras\",\"Energia & Offshore\",\"Manutenção Industrial\"].map(x=><div className=\"card\" key={x}><div className=\"pad\"><span className=\"badge\">Setor</span><h3>{x}</h3><p>Soluções e equipas técnicas adaptadas às exigências do projeto.</p></div></div>)}</div></section></>}"],"names":["P","kicker","title","text","className","map","x"],"mappings":";;;;;AAAA;;;AAA4D,SAASA;IAAI,qBAAO;;0BAAE,8OAAC,wIAAQ;gBAACC,QAAO;gBAAYC,OAAM;gBAAUC,MAAK;;;;;;0BAA8D,8OAAC;gBAAQC,WAAU;0BAAU,cAAA,8OAAC;oBAAIA,WAAU;8BAAc;wBAAC;wBAAiB;wBAAuB;wBAAc;wBAAa;wBAAqB;qBAAwB,CAACC,GAAG,CAACC,CAAAA,kBAAG,8OAAC;4BAAIF,WAAU;sCAAe,cAAA,8OAAC;gCAAIA,WAAU;;kDAAM,8OAAC;wCAAKA,WAAU;kDAAQ;;;;;;kDAAY,8OAAC;kDAAIE;;;;;;kDAAO,8OAAC;kDAAE;;;;;;;;;;;;2BAA3EA;;;;;;;;;;;;;;;;;;;;;AAA+K"}}]
-}
