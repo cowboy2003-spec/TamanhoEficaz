@@ -20,9 +20,7 @@ export default async function ProjectPage({
         }}
       >
         <div className="wrap">
-          <div className="kicker">Portefólio publicado</div>
           <h1 style={{ fontSize: 54, margin: "8px 0" }}>{project.title}</h1>
-          <span className="badge">{project.tag}</span>
         </div>
       </section>
 
