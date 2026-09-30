@@ -20,9 +20,7 @@ export default async function ProjectPage({
         }}
       >
         <div className="wrap">
-          <div className="kicker">Portefólio publicado</div>
           <h1 style={{ fontSize: 54, margin: "8px 0" }}>{project.title}</h1>
-          <span className="badge">{project.tag}</span>
         </div>
       </section>
 
@@ -30,7 +28,7 @@ export default async function ProjectPage({
         <div className="wrap">
           <h2 className="title">Galeria do projeto</h2>
           <p className="lead">
-            Selecione uma imagem para abrir a galeria. Pode navegar pelas setas ou pelo teclado.
+            Selecione uma imagem para abrir a galeria. Pode navegar pelas setas, pelo teclado ou deslizando a imagem no telemóvel.
           </p>
           <ProjectGallery images={project.imgs} title={project.title} />
         </div>
