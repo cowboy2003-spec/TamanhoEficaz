@@ -1,6 +1,16 @@
+"use client";
+import {useEffect,useState} from "react";
 import Link from "next/link";
 import {PageHero} from "@/components/Layout";
-export default function P(){return <><PageHero kicker="Privacidade" title="Política de Privacidade" text="Informação sobre a forma como a Tamanho Eficaz trata dados pessoais através deste website."/><section className="section legalPage"><div className="wrap">
+
+type Lang="pt"|"en";
+export default function PrivacyPage(){
+ const [lang,setLang]=useState<Lang>("pt");
+ useEffect(()=>{setLang(localStorage.getItem("te-lang")==="en"?"en":"pt")},[]);
+ if(lang==="en") return <PrivacyEN/>;
+ return <PrivacyPT/>;
+}
+function PrivacyPT(){return <><PageHero kicker="Privacidade" title="Política de Privacidade" text="Informação sobre a forma como a Tamanho Eficaz trata dados pessoais através deste website."/><section className="section legalPage"><div className="wrap">
 <p className="lead">A Tamanho Eficaz, Lda. respeita a privacidade dos utilizadores e trata os dados pessoais de acordo com o Regulamento Geral sobre a Proteção de Dados (RGPD), a Lei n.º 58/2019 e demais legislação aplicável.</p>
 <h2>1. Responsável pelo tratamento</h2><p><strong>Tamanho Eficaz, Lda.</strong><br/>R. Mercado 26 R/C, 3020-863 Souselas, Portugal<br/>Telefone: +351 912 647 472<br/>E-mail: geral@tamanhoeficaz.pt</p>
 <h2>2. Dados tratados e finalidades</h2><p>Podemos tratar os dados que o utilizador fornece nos formulários, designadamente nome, contactos, empresa, informação sobre projetos, área profissional, experiência, disponibilidade e ficheiros enviados. Os dados são utilizados para responder a contactos, analisar pedidos de proposta, gerir relações pré-contratuais ou comerciais e apreciar candidaturas de recrutamento.</p>
@@ -14,4 +24,19 @@ export default function P(){return <><PageHero kicker="Privacidade" title="Polí
 <h2>10. Reclamação</h2><p>O titular pode apresentar reclamação à autoridade de controlo competente. Em Portugal, a autoridade é a Comissão Nacional de Proteção de Dados (CNPD).</p>
 <h2>11. Cookies e serviços externos</h2><p>Consulte a nossa <Link href="/cookies">Política de Cookies</Link>. Ligações para serviços externos, como Facebook ou o canal de denúncias WhistleOn, conduzem a serviços com políticas próprias, pelas quais esses terceiros são responsáveis.</p>
 <h2>12. Alterações</h2><p>Esta política pode ser atualizada para refletir alterações legais, técnicas ou nos tratamentos efetuados. A versão publicada nesta página é a versão em vigor.</p><p><strong>Última atualização: 30 de setembro de 2026.</strong></p>
+</div></section></>}
+function PrivacyEN(){return <><PageHero kicker="Privacy" title="Privacy Policy" text="Information about how Tamanho Eficaz processes personal data through this website."/><section className="section legalPage"><div className="wrap">
+<p className="lead">Tamanho Eficaz, Lda. respects users' privacy and processes personal data in accordance with the General Data Protection Regulation (GDPR), Portuguese Law No. 58/2019 and other applicable legislation.</p>
+<h2>1. Data controller</h2><p><strong>Tamanho Eficaz, Lda.</strong><br/>R. Mercado 26 R/C, 3020-863 Souselas, Portugal<br/>Telephone: +351 912 647 472<br/>E-mail: geral@tamanhoeficaz.pt</p>
+<h2>2. Data processed and purposes</h2><p>We may process data that users provide through our forms, including name, contact details, company, project information, professional area, experience, availability and uploaded files. The data is used to respond to enquiries, assess requests for quotations, manage pre-contractual or commercial relationships and review job applications.</p>
+<h2>3. Legal bases for processing</h2><p>Depending on the circumstances, processing may be based on steps taken before entering into a contract or performance of a contract, compliance with legal obligations, the legitimate interests of Tamanho Eficaz, or consent where consent is the appropriate legal basis. Submitting a form does not constitute consent to receive marketing communications.</p>
+<h2>4. Job applications and CVs</h2><p>Data and documents submitted for recruitment are processed solely to assess the application and contact the candidate regarding professional opportunities. Candidates should avoid including excessive information or special categories of personal data in their CV where such information is not necessary for the application.</p>
+<h2>5. Retention</h2><p>Data is retained only for as long as necessary for the purposes that justified its collection and, where applicable, for the periods required to comply with legal obligations or to establish, exercise or defend legal claims. Enquiries that do not proceed and job applications cease to be retained when there is no longer a legitimate purpose justifying their retention.</p>
+<h2>6. Recipients and service providers</h2><p>Data may be processed by service providers that support Tamanho Eficaz with the technical operation of the website, hosting, e-mail, document management or other necessary services, acting in accordance with applicable legal requirements. Personal data is not sold.</p>
+<h2>7. International transfers</h2><p>Where a service provider involves the processing of personal data outside the European Economic Area, the legally required safeguards will be used, where applicable, to ensure an adequate level of protection.</p>
+<h2>8. Security</h2><p>Technical and organisational measures appropriate to the risk are adopted to protect personal data against unauthorised access, alteration, disclosure, loss or destruction. However, no system connected to the Internet can guarantee absolute security.</p>
+<h2>9. Data subject rights</h2><p>Where applicable, data subjects may request access, rectification, erasure, restriction of processing, data portability and object to processing. They may also withdraw consent at any time where processing is based on consent, without affecting the lawfulness of processing carried out before withdrawal.</p><p>To exercise your rights or ask a privacy-related question, contact <strong>geral@tamanhoeficaz.pt</strong>. We may need to verify the identity of the requester before fulfilling the request.</p>
+<h2>10. Complaints</h2><p>Data subjects may lodge a complaint with the competent supervisory authority. In Portugal, this is the Comissão Nacional de Proteção de Dados (CNPD), the Portuguese Data Protection Authority.</p>
+<h2>11. Cookies and external services</h2><p>Please see our <Link href="/cookies">Cookie Policy</Link>. Links to external services, such as Facebook or the WhistleOn whistleblowing channel, lead to services governed by their own policies, for which those third parties are responsible.</p>
+<h2>12. Changes</h2><p>This policy may be updated to reflect legal or technical changes or changes to the processing activities carried out. The version published on this page is the version currently in force.</p><p><strong>Last updated: 30 September 2026.</strong></p>
 </div></section></>}

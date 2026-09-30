@@ -1,5 +1,13 @@
+"use client";
+import {useEffect,useState} from "react";
 import CookiePreferencesLink from "@/components/CookiePreferencesLink";
-export default function Page(){return <><section className="pagehero"><div className="wrap"><div className="eyebrow light">Informação legal</div><h1>Política de Cookies</h1><p>Informação sobre cookies, armazenamento local e preferências de privacidade neste website.</p></div></section><section className="section legalPage"><div className="wrap">
+type Lang="pt"|"en";
+export default function CookiePage(){
+ const [lang,setLang]=useState<Lang>("pt");
+ useEffect(()=>{setLang(localStorage.getItem("te-lang")==="en"?"en":"pt")},[]);
+ return lang==="en"?<CookiesEN/>:<CookiesPT/>;
+}
+function CookiesPT(){return <><section className="pagehero"><div className="wrap"><div className="eyebrow light">Informação legal</div><h1>Política de Cookies</h1><p>Informação sobre cookies, armazenamento local e preferências de privacidade neste website.</p></div></section><section className="section legalPage"><div className="wrap">
 <h2>1. O que são cookies</h2><p>Cookies são pequenos ficheiros ou identificadores que podem ser armazenados no equipamento do utilizador durante a navegação. Tecnologias semelhantes, como o armazenamento local do navegador, podem guardar preferências necessárias ao funcionamento de uma interface.</p>
 <h2>2. O que utilizamos atualmente</h2><p>Nesta versão do website não são utilizados cookies de publicidade, perfilagem ou análise estatística. É utilizado armazenamento local estritamente necessário para guardar preferências escolhidas pelo utilizador, como a língua e a decisão relativa a cookies. Estas preferências não são utilizadas para publicidade comportamental.</p>
 <h2>3. Categorias</h2><div className="legalTable"><div><strong>Necessários</strong><span>Funcionamento, segurança e conservação das preferências solicitadas pelo utilizador.</span><span>Não requerem consentimento quando estritamente necessários.</span></div><div><strong>Análise</strong><span>Medição de utilização e desempenho.</span><span>Não utilizados atualmente.</span></div><div><strong>Marketing</strong><span>Publicidade, perfilagem ou acompanhamento entre serviços.</span><span>Não utilizados atualmente.</span></div></div>
@@ -8,4 +16,14 @@ export default function Page(){return <><section className="pagehero"><div class
 <h2>6. Gestão no navegador</h2><p>O utilizador pode também apagar ou bloquear cookies e armazenamento local através das definições do navegador. A eliminação das preferências locais poderá fazer com que o website volte a solicitar a escolha de cookies ou de idioma.</p>
 <h2>7. Alterações</h2><p>Se forem introduzidas ferramentas de análise, marketing ou outros serviços não essenciais, esta política e o mecanismo de consentimento deverão ser atualizados antes da respetiva ativação.</p>
 <h2>8. Contacto</h2><p>Questões sobre privacidade ou cookies podem ser enviadas para <strong>geral@tamanhoeficaz.pt</strong>.</p><p><strong>Última atualização: 30 de setembro de 2026.</strong></p>
+</div></section></>}
+function CookiesEN(){return <><section className="pagehero"><div className="wrap"><div className="eyebrow light">Legal information</div><h1>Cookie Policy</h1><p>Information about cookies, local storage and privacy preferences on this website.</p></div></section><section className="section legalPage"><div className="wrap">
+<h2>1. What are cookies?</h2><p>Cookies are small files or identifiers that may be stored on a user's device while browsing. Similar technologies, such as browser local storage, can save preferences required for an interface to function.</p>
+<h2>2. What we currently use</h2><p>This version of the website does not use advertising, profiling or analytics cookies. Strictly necessary local storage is used to save preferences selected by the user, such as language and cookie choices. These preferences are not used for behavioural advertising.</p>
+<h2>3. Categories</h2><div className="legalTable"><div><strong>Necessary</strong><span>Operation, security and storage of preferences requested by the user.</span><span>Consent is not required where these technologies are strictly necessary.</span></div><div><strong>Analytics</strong><span>Usage and performance measurement.</span><span>Not currently used.</span></div><div><strong>Marketing</strong><span>Advertising, profiling or cross-service tracking.</span><span>Not currently used.</span></div></div>
+<h2>4. Consent</h2><p>Any optional cookies or technologies introduced in the future must not be activated before the user makes a valid choice. Users may accept or reject optional cookies and subsequently change their preference.</p><p><CookiePreferencesLink/></p>
+<h2>5. External services and links</h2><p>The website contains links to external services, including Facebook and WhistleOn. When following an external link, users become subject to that third party's policies and technologies. A simple link does not authorise Tamanho Eficaz to place that third party's cookies on the visitor's device.</p>
+<h2>6. Browser controls</h2><p>Users may also delete or block cookies and local storage through their browser settings. Deleting local preferences may cause the website to ask for cookie or language choices again.</p>
+<h2>7. Changes</h2><p>If analytics, marketing or other non-essential services are introduced, this policy and the consent mechanism must be updated before they are activated.</p>
+<h2>8. Contact</h2><p>Questions about privacy or cookies may be sent to <strong>geral@tamanhoeficaz.pt</strong>.</p><p><strong>Last updated: 30 September 2026.</strong></p>
 </div></section></>}
