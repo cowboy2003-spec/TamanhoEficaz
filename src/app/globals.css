@@ -103,3 +103,54 @@ footer .brand{
 @media(max-width:900px){.whyList{grid-template-columns:1fr}.developerCredit{width:100%;margin-left:0;margin-top:5px}.cookieBanner{left:12px;right:12px;bottom:12px;display:block}.cookieBanner button{margin:14px 0 0}.servicePhotoHero .wrap{width:min(1220px,92%)} }
 
 .langSwitch{gap:8px}.langSwitch button{font-size:20px;line-height:1;padding:5px 4px;border-radius:4px;filter:saturate(.9);opacity:.68}.langSwitch button:hover,.langSwitch button.langActive{opacity:1;background:#eef6fb}.langSwitch .flag{display:block;transform:translateY(-1px)}
+
+/* Menu mobile funcional */
+.mobileNav{display:none}.mobileToggle{border:0;background:transparent;color:#0b2b40;font-size:30px;line-height:1;cursor:pointer;padding:8px}.mobilePanel{position:fixed;z-index:200;top:80px;left:0;right:0;bottom:0;background:#071b29;color:#fff;padding:28px 5vw 34px;overflow:auto}.mobileLinks{display:flex;flex-direction:column}.mobileLinks a{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:20px;font-weight:800}.mobileMenuBottom{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:28px}.mobileMenuBottom .langSwitch button{color:#fff}
+@media(max-width:950px){.mobileNav{display:block}.header .nav{height:72px}.mobilePanel{top:72px}.menu{display:none}}
+
+/* Página Empresa */
+.companyIntro{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:start}.companyFacts{display:grid;grid-template-columns:1fr 1fr;border:1px solid #dfe7ec}.companyFacts div{padding:28px 20px;border-right:1px solid #dfe7ec;border-bottom:1px solid #dfe7ec}.companyFacts b{display:block;color:#087bc1;font-size:22px;margin-bottom:7px}.companyFacts span{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:#657786}.valuesGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:35px;border-top:1px solid #dfe7ec;border-bottom:1px solid #dfe7ec}.valuesGrid article{padding:32px;border-right:1px solid #dfe7ec}.valuesGrid article:last-child{border-right:0}.valuesGrid article>span{font-size:12px;font-weight:900;color:#087bc1}.valuesGrid h3{font-size:24px;margin:12px 0}.valuesGrid p{line-height:1.7;color:#627382}.marketLine{display:grid;grid-template-columns:repeat(4,1fr);margin:35px 0;border-top:1px solid #355064;border-bottom:1px solid #355064}.marketLine span{text-align:center;padding:24px 12px;font-weight:900;border-right:1px solid #355064}.marketLine span:last-child{border-right:0}
+@media(max-width:900px){.companyIntro,.valuesGrid,.marketLine{grid-template-columns:1fr}.companyFacts{grid-template-columns:1fr 1fr}.valuesGrid article,.marketLine span{border-right:0;border-bottom:1px solid #dfe7ec}.marketLine span{border-bottom-color:#355064}.valuesGrid article:last-child,.marketLine span:last-child{border-bottom:0}}
+
+/* Revisão mobile final 30-09-2026 */
+@media(max-width:950px){
+  /* O header fica sempre no topo sem ocupar/reaparecer dentro do conteúdo */
+  .header{position:relative;top:auto;z-index:100;background:#fff}
+  .header .nav{height:64px}
+  .logoLink img{height:43px}
+  .mobileToggle{font-size:28px;padding:6px}
+  .mobilePanel{position:fixed;inset:0;top:0;z-index:1000;padding:86px 5vw 28px;background:#071b29;overflow-y:auto}
+  .mobilePanel::before{content:"";position:fixed;left:0;right:0;top:0;height:64px;background:#fff;border-bottom:1px solid #e6edf2;z-index:1001}
+  .mobilePanel::after{content:"";position:fixed;top:13px;left:5vw;width:150px;height:38px;background:url('/images/brand/tamanho-eficaz-logo.png') left center/contain no-repeat;z-index:1002;pointer-events:none}
+  .mobileNav:has(.mobilePanel) .mobileToggle{position:fixed;right:4vw;top:8px;z-index:1003;color:#0b2b40}
+  .mobileLinks a{padding:15px 0;font-size:18px}
+  .mobileMenuBottom{margin-top:20px}
+
+  /* Hero das páginas */
+  .pagehero{padding:62px 0}.pagehero h1{font-size:38px;line-height:1.05}.pagehero p{font-size:16px;line-height:1.6}
+
+  /* Serviços: cartões verdadeiramente legíveis em telemóvel */
+  .serviceCards{gap:18px}.serviceCardImg{height:220px}
+  .serviceCardPhoto .pad{padding:20px}
+  .serviceCardPhoto .pad h2{font-size:22px;margin:0 0 10px}
+  .serviceCardPhoto .pad p{font-size:15px;line-height:1.55;-webkit-line-clamp:unset;display:block;margin:0 0 14px}
+  .serviceCardPhoto .pad b{font-size:14px}
+
+  /* Páginas individuais: escala e listas consistentes */
+  .servicePhotoHero{min-height:390px}.servicePhotoHero h1{font-size:40px}.servicePhotoHero p{font-size:16px;line-height:1.55}
+  .serviceEditorial{gap:34px}.serviceIntroImage img{max-height:420px}
+  .serviceRow{grid-template-columns:38px 1fr;gap:10px;padding:18px 0}.serviceRow h3{font-size:17px}.serviceRow p{font-size:14px}
+  .whyItem{grid-template-columns:34px 1fr;gap:8px;padding:18px 0}.whyItem h3{font-size:17px}.whyItem p{font-size:14px}
+  .serviceCTA{padding:28px 24px}
+
+  /* Footer compacto: Empresa e Soluções lado a lado */
+  .footer{padding:46px 0 22px}.foot{grid-template-columns:1fr 1fr;gap:30px 24px}
+  .foot>div:first-child{grid-column:1/-1}.foot>div:last-child{grid-column:1/-1}
+  .foot p{margin:9px 0;font-size:14px;line-height:1.35}.foot h4{margin:0 0 14px}
+  .footerBrand img,.footerLogo,footer .brand img,footer img[alt*="Tamanho Eficaz"]{width:135px}
+  .legal{margin-top:28px;padding-top:16px;gap:7px;font-size:11px}.developerCredit{width:100%;margin-top:8px}
+  .cta{padding:40px 0}.cta h2{font-size:25px;line-height:1.15}
+}
+@media(max-width:390px){
+  .wrap{width:92%}.foot{gap:26px 18px}.foot p{font-size:13px}.serviceCardImg{height:205px}
+}

@@ -210,6 +210,41 @@ const dict:Record<string,string>={
 "Compromisso com Prazos":"Commitment to Deadlines",
 "Prazos Cumpridos":"On-time Delivery"
 };
+Object.assign(dict,{
+"Indústria portuguesa com dimensão europeia":"Portuguese industry with a European reach",
+"Constituída em 2019, a Tamanho Eficaz desenvolve atividade na metalomecânica, manutenção industrial e execução de soluções técnicas para projetos nacionais e internacionais.":"Established in 2019, Tamanho Eficaz operates in metalworking, industrial maintenance and the delivery of technical solutions for national and international projects.",
+"PERFIL EMPRESARIAL":"COMPANY PROFILE",
+"Com sede em Souselas, Coimbra, a Tamanho Eficaz, Lda. está ativa desde 9 de abril de 2019. O CAE principal atualmente publicado é 25530 — Maquinagem de metais, enquadrando uma atividade que a própria empresa apresenta de forma mais ampla na indústria metalomecânica e manutenção industrial.":"Based in Souselas, Coimbra, Tamanho Eficaz, Lda. has been active since 9 April 2019. Its currently published primary economic activity code is 25530 — Machining of metals, within a broader activity that the company presents in metalworking and industrial maintenance.",
+"A presença pública da empresa inclui serviços de soldadura, serralharia, serralharia mecânica, eletricidade industrial, tubagem e operação de gruas, com atuação divulgada em Portugal, Espanha, França e Bélgica.":"The company's public offering includes welding, metal fabrication, mechanical metalwork, industrial electrical work, piping and crane operation, with activity published in Portugal, Spain, France and Belgium.",
+"Constituição":"Established",
+"NIPC":"Company tax ID",
+"CAE principal":"Primary activity code",
+"Sede":"Head office",
+"ATIVIDADE":"ACTIVITY",
+"Metalomecânica, manutenção e execução industrial":"Metalworking, maintenance and industrial execution",
+"A comunicação institucional da empresa identifica a manutenção industrial e a fabricação de projetos e fundações offshore como áreas de especialização. Publicações mais recentes reforçam também a manutenção industrial, fundações onshore, estruturas metálicas e a qualificação das equipas.":"The company's institutional communications identify industrial maintenance and the fabrication of offshore projects and foundations as areas of specialisation. More recent publications also emphasise industrial maintenance, onshore foundations, steel structures and team qualification.",
+"As especializações publicadas incluem metalomecânica, metalurgia, cimenteiras, estruturas metálicas e papeleiras, refletindo uma atuação transversal em ambientes industriais exigentes.":"Published specialisations include metalworking, metallurgy, cement plants, steel structures and the pulp and paper industry, reflecting cross-sector activity in demanding industrial environments.",
+"MISSÃO · VISÃO · VALORES":"MISSION · VISION · VALUES",
+"Crescimento sustentado por relações de longo prazo":"Sustainable growth built on long-term relationships",
+"Missão":"Mission",
+"Fomentar parcerias de longo prazo assentes na competência e confiança, reforçando a posição da empresa nos mercados nacional e internacional.":"Build long-term partnerships based on expertise and trust, strengthening the company's position in national and international markets.",
+"Atualizar continuamente conhecimento e capacidade técnica, promovendo um crescimento sustentável e preparado para novos desafios de mercado.":"Continuously update knowledge and technical capability, promoting sustainable growth prepared for new market challenges.",
+"Motivação, eficiência, melhoria contínua, proximidade com o cliente e foco na qualidade e segurança da execução.":"Motivation, efficiency, continuous improvement, customer proximity and a focus on quality and safe execution.",
+"Portugal e Europa":"Portugal and Europe",
+"A empresa publica atividade em Portugal, Espanha, França e Bélgica. A entrada nos mercados internacionais foi apontada pela própria liderança como um dos fatores diferenciadores do crescimento da Tamanho Eficaz.":"The company publishes activity in Portugal, Spain, France and Belgium. Its leadership has identified entry into international markets as one of the differentiating factors behind Tamanho Eficaz's growth.",
+"Em comunicações públicas, a empresa referiu ainda os Países Baixos e a Alemanha como mercados pretendidos para expansão. Estes dois países são apresentados aqui como objetivo estratégico, e não como presença operacional confirmada.":"In public communications, the company has also identified the Netherlands and Germany as target markets for expansion. These two countries are presented here as strategic objectives, not as confirmed operational markets.",
+"CRESCIMENTO E RECONHECIMENTO":"GROWTH AND RECOGNITION",
+"Gazela 2023 e 2024":"Gazelle 2023 and 2024",
+"A Tamanho Eficaz foi distinguida como Empresa Gazela da Região Centro relativamente a 2023 e voltou a integrar a lista de Empresas Gazela de 2024. A empresa associa este percurso à qualificação das equipas, proximidade com clientes, internacionalização e melhoria contínua.":"Tamanho Eficaz was recognised as a Gazelle Company in Portugal's Centro Region for 2023 and again joined the 2024 Gazelle Companies list. The company associates this trajectory with team qualification, customer proximity, internationalisation and continuous improvement.",
+"Mais recentemente, a Tamanho Eficaz divulgou a sua presença na 20.ª edição do Millennium Portugal Exportador, enquadrando-a na estratégia de internacionalização, acompanhamento das tendências de mercado e desenvolvimento de soluções para parceiros e clientes.":"More recently, Tamanho Eficaz publicised its participation in the 20th Millennium Portugal Exportador, framing it within its internationalisation strategy, monitoring of market trends and development of solutions for partners and customers.",
+"QUALIFICAÇÃO E SEGURANÇA":"SKILLS AND SAFETY",
+"Equipas preparadas para projetos exigentes":"Teams prepared for demanding projects",
+"Em entrevistas públicas, a liderança destaca a qualificação das equipas, formação especializada, análise de risco, preparação em soldadura, leitura e desenho técnico e organização da fabricação como fatores relevantes para a execução dos projetos.":"In public interviews, the company's leadership highlights team qualification, specialist training, risk analysis, welding preparation, technical drawing and fabrication organisation as relevant factors in project execution.",
+"ISO 9001 e ISO 45001:":"ISO 9001 and ISO 45001:",
+"Abrir menu":"Open menu",
+"Fechar menu":"Close menu",
+"Menu principal":"Main menu"
+});
 function translate(root:Node){
  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
  const nodes:Text[]=[]; let n; while(n=walker.nextNode()) nodes.push(n as Text);
