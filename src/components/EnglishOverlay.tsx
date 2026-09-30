@@ -208,7 +208,7 @@ const dict:Record<string,string>={
 "Atendimento Personalizado":"Personalised Service",
 "Qualidade Superior":"High Quality",
 "Compromisso com Prazos":"Commitment to Deadlines",
-"Prazos Cumpridos":"On-time Delivery"
+"Prazos Cumpridos":"On-time Delivery",
 
 "Informação sobre cookies, armazenamento local e preferências de privacidade neste website.":"Information about cookies, local storage and privacy preferences on this website.",
 "1. O que são cookies":"1. What are cookies",
