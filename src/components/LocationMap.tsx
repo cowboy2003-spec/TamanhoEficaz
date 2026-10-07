@@ -1,7 +1,7 @@
 "use client";
 
 import {useEffect, useState} from "react";
-import {MapPin, ArrowUpRight} from "lucide-react";
+import {MapPin} from "lucide-react";
 
 const address = "Tamanho Eficaz, Lda., R. Mercado 26 R/C, 3020-863 Souselas, Coimbra, Portugal";
 const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
@@ -32,7 +32,7 @@ export default function LocationMap() {
         <button type="button" onClick={() => window.dispatchEvent(new Event("te-open-cookie-settings"))}>Preferências de cookies</button>
       </div>}
     <a className="refMapLink" href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-      <MapPin size={18} aria-hidden="true"/>Abrir no Google Maps ↗<ArrowUpRight size={16} aria-hidden="true"/>
+      <MapPin size={18} aria-hidden="true"/>Abrir no Google Maps
     </a>
   </div>;
 }

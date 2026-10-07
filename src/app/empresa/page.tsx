@@ -33,7 +33,7 @@ export default function Empresa() {
     <section className="refTeam" aria-labelledby="team-title">
       <img src={referenceImages.companyTeam} alt="Estrutura metálica em execução"/>
       <div className="refTeamContent">
-        <div className="refKicker">A nossa equipa</div>
+        
         <h2 id="team-title">Equipa.<br/>Competência no terreno.</h2>
         <p>A liderança destaca a qualificação das equipas, formação especializada, análise de risco, preparação em soldadura, leitura e desenho técnico e organização da fabricação como fatores relevantes para a execução dos projetos.</p>
       </div>

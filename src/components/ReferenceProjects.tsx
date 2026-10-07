@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {ArrowRight, X} from "lucide-react";
+import {X} from "lucide-react";
 import {useEffect, useRef, useState} from "react";
 import {projectData} from "@/data/site";
 
@@ -36,7 +36,7 @@ export default function ReferenceProjects() {
       </div>
       <div className={`refProjectGrid${active!=="Todos"?" filtered":""}`} aria-live="polite">
         {filtered.map(project => {
-          const content = <><img src={project.image} alt={project.title}/><div className="refProjectShade"/><div className="refProjectMeta"><div><h2>{project.title}</h2>{project.subtitle && <p>{project.subtitle}</p>}</div><ArrowRight size={22} aria-hidden="true"/></div></>;
+          const content = <><img src={project.image} alt={project.title}/><div className="refProjectShade"/><div className="refProjectMeta"><div><h2>{project.title}</h2>{project.subtitle && <p>{project.subtitle}</p>}</div></div></>;
           const className = `refProjectCard${project.featured?" featured":""}`;
           return project.href ? <Link href={project.href} key={project.title} className={className}>{content}</Link> : <button type="button" className={className} key={project.title} aria-label={`Ver imagem: ${project.title}`} onClick={()=>setExpanded(project)}>{content}</button>;
         })}

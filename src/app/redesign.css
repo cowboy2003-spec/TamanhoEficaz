@@ -413,3 +413,10 @@
   .refNewsImage img { transition: none; }
   .refNewsImage:is(:hover, :focus-visible) img { transform: none; }
 }
+
+/* Keep content aligned after removing editorial labels, numbers and arrows. */
+.sigCap { justify-content: flex-end; }
+.sigProjectMeta, .serviceRow, .whyItem { grid-template-columns: 1fr; }
+@media (max-width: 950px) {
+  .sigCountryLine { grid-template-columns: repeat(2, 1fr); }
+}

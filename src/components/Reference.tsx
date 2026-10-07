@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {ArrowRight} from "lucide-react";
 
 export function ReferenceHero({className="", kicker, title, children, image}: {
   className?: string; kicker?: string; title: React.ReactNode;
@@ -18,5 +17,5 @@ export function ReferenceHero({className="", kicker, title, children, image}: {
 export function ReferenceLink({href, children, solid=false}: {
   href:string; children: React.ReactNode; solid?:boolean;
 }) {
-  return <Link className={`refButton${solid?" solid":""}`} href={href}>{children}<ArrowRight size={18} aria-hidden="true"/></Link>;
+  return <Link className={`refButton${solid?" solid":""}`} href={href}>{children}</Link>;
 }

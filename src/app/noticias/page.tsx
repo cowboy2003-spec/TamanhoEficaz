@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {ArrowRight} from "lucide-react";
 import {news} from "@/data/content";
 
 const cards = [
@@ -10,7 +9,7 @@ const cards = [
 export default function Noticias() {
   return <main className="refPage refNews">
     <section className="refNewsIntro"><div className="refWrap">
-      <div className="refKicker">Notícias</div><h1>Notícias e<br/>reconhecimento.</h1>
+      <h1>Notícias e<br/>reconhecimento.</h1>
       <p className="refUppercase">A nossa evolução, os nossos projetos e o nosso percurso.</p>
     </div></section>
     <section id="arquivo" className="refNewsSection" aria-label="Notícias"><div className="refWrap refNewsGrid">
@@ -18,6 +17,6 @@ export default function Noticias() {
         <Link href={`/noticias/${card.slug}`} className="refNewsImage"><img src={card.image} alt={card.title}/></Link>
         <div className="refNewsCopy"><h2><Link href={`/noticias/${card.slug}`}>{card.title}</Link></h2><time dateTime={card.slug.endsWith('2024')?'2025-07-07':'2024-07-11'}>{card.date}</time><p>{card.lead}</p></div>
       </article>)}
-    </div><div className="refWrap refAllNews"><a href="#arquivo" className="refMore">Ver todas as notícias <ArrowRight size={16} aria-hidden="true"/></a></div></section>
+    </div><div className="refWrap refAllNews"><a href="#arquivo" className="refMore">Ver todas as notícias </a></div></section>
   </main>;
 }
