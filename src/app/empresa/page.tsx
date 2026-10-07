@@ -1,20 +1,47 @@
-import {PageHero} from "@/components/Layout";
+import {Target, Eye, Heart} from "lucide-react";
+import {ReferenceHero, ReferenceLink} from "@/components/Reference";
+import {referenceImages} from "@/data/reference";
 
-export default function Empresa(){return <>
-<PageHero kicker="A empresa" title="Indústria portuguesa com dimensão europeia" text="Constituída em 2019, a Tamanho Eficaz desenvolve atividade na metalomecânica, manutenção industrial e execução de soluções técnicas para projetos nacionais e internacionais."/>
+const facts = [["2019", "Ano de criação"], ["51 432 326", "Volume de negócios"], ["75 000+", "Horas de trabalho"], ["Coimbra", "Sede"]];
+const values = [
+  [Target, "Missão", "Fomentar parcerias de longo prazo assentes na competência e confiança, reforçando a posição da empresa nos mercados nacional e internacional."],
+  [Eye, "Visão", "Atualizar continuamente conhecimento e capacidade técnica, promovendo um crescimento sustentável e preparado para novos desafios de mercado."],
+  [Heart, "Valores", "Motivação, eficiência, melhoria contínua, proximidade com o cliente e foco na qualidade e segurança da execução."],
+] as const;
 
-<section className="section"><div className="wrap companyIntro">
-  <div><div className="eyebrow">PERFIL EMPRESARIAL</div><h2 className="title">Tamanho Eficaz, Lda.</h2><p className="lead">Com sede em Souselas, Coimbra, a Tamanho Eficaz, Lda. está ativa desde 9 de abril de 2019. O CAE principal atualmente publicado é 25530 — Maquinagem de metais, enquadrando uma atividade que a própria empresa apresenta de forma mais ampla na indústria metalomecânica e manutenção industrial.</p><p className="lead">A presença pública da empresa inclui serviços de soldadura, serralharia, serralharia mecânica, eletricidade industrial, tubagem e operação de gruas, com atuação divulgada em Portugal, Espanha, França e Bélgica.</p></div>
-  <div className="companyFacts"><div><b>2019</b><span>Constituição</span></div><div><b>515 432 326</b><span>NIPC</span></div><div><b>25530</b><span>CAE principal</span></div><div><b>Coimbra</b><span>Sede</span></div></div>
-</div></section>
-
-<section className="section soft"><div className="wrap split"><img src="/images/facebook/78158078_103124127844421_6959067503196635136_n.jpg" alt="Trabalho industrial Tamanho Eficaz"/><div><div className="eyebrow">ATIVIDADE</div><h2 className="title">Metalomecânica, manutenção e execução industrial</h2><p className="lead">A comunicação institucional da empresa identifica a manutenção industrial e a fabricação de projetos e fundações offshore como áreas de especialização. Publicações mais recentes reforçam também a manutenção industrial, fundações onshore, estruturas metálicas e a qualificação das equipas.</p><p className="lead">As especializações publicadas incluem metalomecânica, metalurgia, cimenteiras, estruturas metálicas e papeleiras, refletindo uma atuação transversal em ambientes industriais exigentes.</p></div></div></section>
-
-<section className="section"><div className="wrap"><div className="eyebrow">MISSÃO · VISÃO · VALORES</div><h2 className="title">Crescimento sustentado por relações de longo prazo</h2><div className="valuesGrid"><article><span>01</span><h3>Missão</h3><p>Fomentar parcerias de longo prazo assentes na competência e confiança, reforçando a posição da empresa nos mercados nacional e internacional.</p></article><article><span>02</span><h3>Visão</h3><p>Atualizar continuamente conhecimento e capacidade técnica, promovendo um crescimento sustentável e preparado para novos desafios de mercado.</p></article><article><span>03</span><h3>Valores</h3><p>Motivação, eficiência, melhoria contínua, proximidade com o cliente e foco na qualidade e segurança da execução.</p></article></div></div></section>
-
-<section className="section dark"><div className="wrap"><div className="eyebrow light">INTERNACIONALIZAÇÃO</div><h2 className="title">Portugal e Europa</h2><p className="lead">A empresa publica atividade em Portugal, Espanha, França e Bélgica. A entrada nos mercados internacionais foi apontada pela própria liderança como um dos fatores diferenciadores do crescimento da Tamanho Eficaz.</p><div className="marketLine"><span>Portugal</span><span>Espanha</span><span>França</span><span>Bélgica</span></div><p className="lead">Em comunicações públicas, a empresa referiu ainda os Países Baixos e a Alemanha como mercados pretendidos para expansão. Estes dois países são apresentados aqui como objetivo estratégico, e não como presença operacional confirmada.</p></div></section>
-
-<section className="section"><div className="wrap split"><div><div className="eyebrow">CRESCIMENTO E RECONHECIMENTO</div><h2 className="title">Gazela 2023 e 2024</h2><p className="lead">A Tamanho Eficaz foi distinguida como Empresa Gazela da Região Centro relativamente a 2023 e voltou a integrar a lista de Empresas Gazela de 2024. A empresa associa este percurso à qualificação das equipas, proximidade com clientes, internacionalização e melhoria contínua.</p><p className="lead">Mais recentemente, a Tamanho Eficaz divulgou a sua presença na 20.ª edição do Millennium Portugal Exportador, enquadrando-a na estratégia de internacionalização, acompanhamento das tendências de mercado e desenvolvimento de soluções para parceiros e clientes.</p></div><img src="/images/gazela-2024.jpg" alt="Prémio Empresa Gazela 2024"/></div></section>
-
-<section className="section soft"><div className="wrap split"><img src="/images/facebook/89058750_143791597111007_6522850721736425472_n.jpg" alt="Profissional Tamanho Eficaz"/><div><div className="eyebrow">QUALIFICAÇÃO E SEGURANÇA</div><h2 className="title">Equipas preparadas para projetos exigentes</h2><p className="lead">Em entrevistas públicas, a liderança destaca a qualificação das equipas, formação especializada, análise de risco, preparação em soldadura, leitura e desenho técnico e organização da fabricação como fatores relevantes para a execução dos projetos.</p><p className="lead"><b>ISO 9001 e ISO 45001:</b> o site institucional indica um processo de implementação destas certificações. Até existir confirmação documental atual de certificação concluída, esta demo não apresenta a empresa como certificada.</p></div></div></section>
-</>}
+export default function Empresa() {
+  return <main className="refPage refCompany">
+    {/* Option A: only this hero and the team block below. */}
+    <ReferenceHero className="refCompanyHero" image={referenceImages.companyHero} title={<>Indústria portuguesa<br/>com dimensão<br/>europeia.</>}>
+      <p>A Tamanho Eficaz, Lda. é uma empresa portuguesa com experiência em soluções metalomecânicas, manutenção industrial e projetos em Portugal e na Europa.</p>
+      <ReferenceLink href="#perfil">Saber mais</ReferenceLink>
+    </ReferenceHero>
+    {/* Option B: photo profile, horizontal facts and three values. */}
+    <section className="refProfileSection" id="perfil">
+      <div className="refWrap">
+        <div className="refProfile">
+          <div className="refProfileText">
+            <h2>Tamanho Eficaz, Lda.</h2>
+            <p className="refProfileLead">Com sede em Souselas, Coimbra, a Tamanho Eficaz, Lda. está ativa desde 9 de abril de 2019.</p>
+            <p>A presença pública inclui soldadura, serralharia, serralharia mecânica, eletricidade industrial, tubagem e operação de gruas, com atuação divulgada em Portugal, Espanha, França e Bélgica.</p>
+          </div>
+          <img className="refProfilePhoto" src={referenceImages.companyProfile} alt="Profissional Tamanho Eficaz em trabalho industrial"/>
+        </div>
+        <dl className="refFacts">{facts.map(([value,label]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+      </div>
+    </section>
+    <section className="refTeam" aria-labelledby="team-title">
+      <img src={referenceImages.companyTeam} alt="Estrutura metálica em execução"/>
+      <div className="refTeamContent">
+        <div className="refKicker">A nossa equipa</div>
+        <h2 id="team-title">Equipa.<br/>Competência no terreno.</h2>
+        <p>A liderança destaca a qualificação das equipas, formação especializada, análise de risco, preparação em soldadura, leitura e desenho técnico e organização da fabricação como fatores relevantes para a execução dos projetos.</p>
+      </div>
+    </section>
+    <section className="refValuesSection" aria-label="Missão, visão e valores">
+      <div className="refWrap refValues">{values.map(([Icon,title,text]) => <article key={title}>
+        <Icon size={30} strokeWidth={1.5} aria-hidden="true"/><h2>{title}</h2><p>{text}</p>
+      </article>)}</div>
+    </section>
+  </main>;
+}

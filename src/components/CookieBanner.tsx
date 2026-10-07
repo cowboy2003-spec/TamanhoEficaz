@@ -36,7 +36,7 @@ export default function CookieBanner(){
     :"Utilizamos armazenamento estritamente necessário ao funcionamento do website e às suas preferências. Cookies opcionais de análise ou marketing só poderão ser ativados com o seu consentimento."}</p>
    {manage&&<div className="cookieChoices">
     <div><strong>{en?"Necessary":"Necessários"}</strong><span>{en?"Always active — preferences, security and website operation.":"Sempre ativos — preferências, segurança e funcionamento do site."}</span></div>
-    <div><strong>{en?"Optional":"Opcionais"}</strong><span>{en?"Analytics, advertising and profiling cookies are not currently used.":"Atualmente não são utilizados cookies de análise, publicidade ou perfilagem."}</span></div>
+    <div><strong>{en?"Optional":"Opcionais"}</strong><span>{en?"External content: Google Maps on the Contacts page, loaded only with consent.":"Conteúdo externo: Google Maps na página Contactos, carregado apenas com consentimento."}</span></div>
    </div>}
    <p className="cookieLinks"><Link href="/cookies">{en?"Cookie Policy":"Política de Cookies"}</Link> · <Link href="/privacidade">{en?"Privacy Policy":"Política de Privacidade"}</Link></p>
   </div>

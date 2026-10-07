@@ -1,1 +1,26 @@
-import {PageHero} from "@/components/Layout";export default function P(){return <><PageHero kicker="Internacional" title="Experiência além-fronteiras" text="A Tamanho Eficaz publica atividade em Portugal, Espanha, França e Bélgica, com projetos ligados à indústria e energia."/><section className="section dark"><div className="wrap"><div className="eyebrow light">MERCADOS PUBLICADOS</div><h2 className="title">Uma operação com dimensão europeia</h2><div className="countries"><div className="country">🇵🇹 Portugal</div><div className="country">🇪🇸 Espanha</div><div className="country">🇫🇷 França</div><div className="country">🇧🇪 Bélgica</div></div><p className="lead" style={{marginTop:35}}>Em entrevista de 2024, Filipe Silva apontou Países Baixos e Alemanha como mercados pretendidos para expansão e destacou projetos ligados à energia onshore e offshore. Estes dois países são apresentados como ambição, não como presença já estabelecida.</p></div></section><section className="section"><div className="wrap split"><div><div className="eyebrow">PARCERIAS</div><h2 className="title">Experiência em cadeias industriais exigentes</h2><p className="lead">A liderança identificou publicamente a Smulders Projects N.V. como um dos seus melhores clientes internacionais e relacionou essa colaboração com preparação em soldadura, desenho técnico e organização da fabricação.</p></div><img src="/images/projects/baltic/Jacket-Baltic-Eagle-01-1-1024x766.jpg" alt="Projeto internacional"/></div></section></>}
+import Link from "next/link";
+import {ArrowRight} from "lucide-react";
+import EuropeMap from "@/components/EuropeMap";
+import {referenceImages} from "@/data/reference";
+
+export default function Internacional() {
+  return <main className="refPage refInternational">
+    <section className="refInternationalHero">
+      <EuropeMap/>
+      <div className="refInternationalShade"/>
+      <div className="refWrap refInternationalContent">
+        
+        <h1>Portugal e Europa.</h1>
+        <p>Levamos a experiência e a capacidade de execução da Tamanho Eficaz a diferentes mercados europeus, respondendo a projetos de elevada exigência técnica.</p>
+        <div className="refCountries">{["Portugal", "Espanha", "França", "Bélgica"].map(country => <Link key={country} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(country)}`} target="_blank" rel="noreferrer">{country}<ArrowRight size={18} aria-hidden="true"/></Link>)}</div>
+      </div>
+    </section>
+    <section className="refInternationalSplit">
+      <img src={referenceImages.internationalProject} alt="Projeto industrial internacional"/>
+      <div className="refInternationalText">
+        <h2>Parcerias,<br/>projetos e execução<br/>em contexto internacional.</h2>
+        <p>A liderança identificou publicamente a Smulders Projects N.V. como um dos seus melhores clientes internacionais, relacionando essa colaboração com preparação em soldadura, desenho técnico e organização da fabricação.</p>
+      </div>
+    </section>
+  </main>;
+}

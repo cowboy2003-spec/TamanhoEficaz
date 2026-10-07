@@ -1,0 +1,32 @@
+:root{--v5navy:#04192b;--v5ink:#0b1f31;--v5blue:#0a84d8;--v5soft:#f2f5f8;--v5line:#dde5ec}
+.v5hero{position:relative;background:linear-gradient(120deg,#04192b 30%,#0b3558);background-size:cover;background-position:center;color:#fff;padding:96px 0 84px}
+.v5hero.tall{padding:140px 0 120px}
+.v5hero .wrap{max-width:1220px}.v5hero h1{font-size:clamp(34px,5vw,60px);line-height:1.04;max-width:720px;margin:14px 0 18px;letter-spacing:-.02em}
+.v5hero p{max-width:560px;font-size:18px;line-height:1.6;color:#d4e0ea;margin:0 0 26px}
+.v5kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--v5blue);font-weight:700}
+.v5btn{display:inline-block;padding:12px 22px;border:1px solid rgba(255,255,255,.5);color:#fff;font-weight:600;font-size:14px}.v5btn:hover{background:var(--v5blue);border-color:var(--v5blue)}
+.v5sec{padding:72px 0}.v5sec.soft{background:var(--v5soft)}.v5sec.dark{background:var(--v5navy);color:#fff}
+.v5sec h2{font-size:clamp(28px,3.4vw,42px);line-height:1.1;margin:8px 0 18px;color:var(--v5ink)}.v5sec.dark h2{color:#fff}
+.v5sec p{line-height:1.7;color:#42576a;font-size:17px}
+.v5no{color:var(--v5blue);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.v5profile,.v5split{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.v5profile img,.v5split img{width:100%;height:100%;max-height:420px;object-fit:cover;box-shadow:0 20px 50px rgba(4,25,43,.18)}
+.v5facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;background:#fff;border:1px solid var(--v5line);box-shadow:0 10px 30px rgba(4,25,43,.07)}
+.v5facts div{padding:26px 24px;border-right:1px solid var(--v5line)}.v5facts div:last-child{border:0}
+.v5facts b{display:block;font-size:26px;color:var(--v5blue)}.v5facts span{font-size:13px;color:#60758a}
+.v5banner{display:grid;grid-template-columns:1fr 1fr;background:var(--v5navy);color:#fff;min-height:440px}
+.v5bannerImg{background-size:cover;background-position:center;min-height:300px}
+.v5bannerTxt{padding:64px 7%;align-self:center}.v5bannerTxt h2{font-size:clamp(28px,3.4vw,44px);margin:12px 0 18px;line-height:1.1}
+.v5bannerTxt p{color:#c9d7e3;line-height:1.7}.v5note{font-size:14px;border-left:3px solid var(--v5blue);padding-left:14px}
+.v5values{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.v5values article{background:#fff;padding:30px;border:1px solid var(--v5line)}.v5values svg{color:var(--v5blue)}.v5values h3{margin:14px 0 8px}.v5values p{font-size:15px;margin:0}
+.v5cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.v5cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.v5card,.v5news,.v5proj{background:#fff;border:1px solid var(--v5line);box-shadow:0 8px 24px rgba(4,25,43,.06);display:block;transition:.25s}
+.v5card:hover,.v5news:hover,.v5proj:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(4,25,43,.14)}
+.v5card img,.v5news img{width:100%;height:210px;object-fit:cover;display:block}.v5card div,.v5news div{padding:22px}
+.v5card h2,.v5news h2{font-size:21px;margin:0 0 8px}.v5card p,.v5news p{font-size:15px;margin:0 0 14px}.v5card b,.v5news b{color:var(--v5blue);font-size:14px}.v5news small{color:var(--v5blue);font-weight:700}
+.v5proj{position:relative;overflow:hidden;color:#fff}.v5proj img{width:100%;height:340px;object-fit:cover;display:block}
+.v5proj div{position:absolute;inset:auto 0 0 0;padding:60px 24px 22px;background:linear-gradient(transparent,rgba(3,17,30,.92))}.v5proj h3{margin:0;font-size:22px}.v5proj span{font-size:13px;color:#9fc4e4}
+.v5countries{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.v5countries div{border:1px solid rgba(255,255,255,.3);padding:20px 22px;display:flex;justify-content:space-between;font-weight:600}.v5countries i{color:var(--v5blue);font-style:normal}
+.v5lead{color:#b9cbdb!important;margin-top:32px;max-width:760px}
+@media(max-width:860px){.v5profile,.v5split,.v5banner,.v5values,.v5cards3,.v5cards2{grid-template-columns:1fr}.v5facts,.v5countries{grid-template-columns:1fr 1fr}.v5hero{padding:64px 0}.v5hero.tall{padding:84px 0}.v5sec{padding:48px 0}}

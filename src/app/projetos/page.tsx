@@ -1,1 +1,11 @@
-import Link from "next/link";import {PageHero} from "@/components/Layout";import {projectData} from "@/data/site";export default function P(){return <><PageHero kicker="Projetos" title="Os nossos trabalhos" text="Projetos publicados pela Tamanho Eficaz, apresentados numa experiência visual mais forte e orientada ao contexto industrial."/><section className="section"><div className="wrap cards">{Object.entries(projectData).map(([slug,p])=><Link className="card" href={"/projetos/"+slug} key={slug}><img src={p.imgs[0]} alt=""/><div className="pad"><h3>{p.title}</h3><b>Explorar projeto →</b></div></Link>)}</div></section></>}
+import {ReferenceHero} from "@/components/Reference";
+import ReferenceProjects from "@/components/ReferenceProjects";
+
+export default function Projetos() {
+  return <main className="refPage refProjects">
+    <ReferenceHero className="refProjectsHero" kicker="A nossa execução" title={<>Projetos que falam<br/>pela escala.</>} image="/images/projects/baltic/Jacket-Baltic-Eagle-01-1-1024x766.jpg">
+      <p className="refUppercase">Execução real em Portugal e na Europa.</p>
+    </ReferenceHero>
+    <ReferenceProjects/>
+  </main>;
+}

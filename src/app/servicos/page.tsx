@@ -1,2 +1,18 @@
-import Link from "next/link";import {servicePages} from "@/data/servicePages";
-export default function Page(){return <><section className="pagehero"><div className="wrap"><div className="kicker">Competências</div><h1>Serviços especializados</h1><p>Equipas e soluções técnicas para projetos de metalomecânica e manutenção industrial.</p></div></section><section className="section"><div className="wrap serviceCards">{servicePages.map(s=><Link className="serviceCardPhoto" href={"/servicos/"+s.slug} key={s.slug}><div className="serviceCardImg"><img src={s.image} alt={s.title}/></div><div className="pad"><h2>{s.title}</h2><p>{s.intro}</p><b>Conhecer serviço →</b></div></Link>)}</div></section></>}
+import Link from "next/link";
+import {ArrowRight} from "lucide-react";
+import {ReferenceHero} from "@/components/Reference";
+import {referenceImages, referenceServices} from "@/data/reference";
+
+export default function Servicos() {
+  return <main className="refPage refServices">
+    <ReferenceHero className="refServicesHero" kicker="A nossa experiência" title={<>Serviços que<br/>mantêm a sua operação<br/>a funcionar.</>} image={referenceImages.servicesHero}>
+      <p className="refUppercase">Da metalomecânica à manutenção industrial,<br/>com soluções adaptadas a cada desafio.</p>
+    </ReferenceHero>
+    <section className="refServiceSection" aria-label="Serviços">
+      <div className="refWrap refServiceGrid">{referenceServices.map(service => <Link href={`/servicos/${service.slug}`} className="refServiceCard" key={service.slug}>
+        <img src={service.image} alt={service.title}/>
+        <div><h2>{service.title}</h2><p>{service.description}</p><span className="refMore">Saber mais <ArrowRight size={16} aria-hidden="true"/></span></div>
+      </Link>)}</div>
+    </section>
+  </main>;
+}
