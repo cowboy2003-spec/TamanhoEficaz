@@ -148,7 +148,7 @@
 .refNewsCopy p { color: #667581; font-size: 19px; line-height: 1.55; margin-top: 20px; }
 .refAllNews { padding-top: 46px; }
 .refCareersHero { min-height: min(43.1vw,620px); }
-.refCareersHero .refHeroImage { left: auto; width: 60%; object-position: right 25%; }
+.refCareersHero .refHeroImage { left: auto; width: 60%; object-fit: contain; object-position: right 25%; }
 .refCareersHero .refHeroShade { background: linear-gradient(90deg, rgba(1,17,27,.98), rgba(1,17,27,.87) 40%, rgba(1,17,27,.1) 80%); }
 .refCareersHero .refHeroContent { padding-block: 100px 80px; }
 .refCareersHero h1 { font-size: clamp(40px, 5.3vw, 76px); }
@@ -199,18 +199,20 @@
 @media (max-width: 950px) {
   .refMenu, .refDesktopLanguage { display: none; }
   .refHeader .mobileNav { display: block; }
-  .refNav { min-height: 86px; justify-content: space-between; }
+  .refNav { min-height: 64px; justify-content: space-between; }
   .refHeader .mobileToggle { color: white; }
-  .refHeader .mobilePanel { top: 86px; height: calc(100dvh - 86px); }
+  .refHeader .mobilePanel { top: 0; height: 100dvh; padding-top: 84px; }
+  .refHeader:has(.mobilePanel) .refLogo { z-index: 1002; }
+  .refHeader .mobileNav:has(.mobilePanel) .mobileToggle { top: 12px; right: 5vw; color: #fff; }
 }
 @media (max-width: 850px) {
   .refWrap, .refNav { width: 90%; }
-  .refNav { min-height: 80px; justify-content: space-between; }
+  .refNav { min-height: 64px; justify-content: space-between; }
   .refLogo { width: 134px; }
   .refMenu, .refDesktopLanguage { display: none; }
   .refHeader .mobileNav { display: block; }
   .refHeader .mobileToggle { color: #fff; }
-  .refHeader .mobilePanel { top: 80px; height: calc(100dvh - 80px); }
+  .refHeader .mobilePanel { top: 0; height: 100dvh; }
   .refHero { min-height: 570px; }
   .refHeroContent { padding-block: 65px; }
   .refHero h1 { font-size: clamp(36px, 6vw, 50px); }
@@ -355,7 +357,7 @@
   animation: heroDrift 14s ease-in-out infinite alternate;
   transform-origin: center;
 }
-.refCareersHero { --hero-scale-from: 1; --hero-scale-to: 1.035; }
+.refCareersHero { --hero-scale-from: 1; --hero-scale-to: 1.015; }
 .servicePhotoHero, .projectHero, .v5hero[style] {
   position: relative;
   overflow: hidden;
